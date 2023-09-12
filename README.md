@@ -1,11 +1,11 @@
-# README
+# TDD com Ruby on Rails, RSpec e Capybara
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este repositório está sendo utilizado para versionar o código fonte, o qual é implementado com base no curso "TDD com Ruby on Rails, RSpec e Capybara".
 
-Things you may want to cover:
+Plataforma: Udemy
+Professor: Jackson Pires
 
-* Ruby version
+* Ruby version 3.2.0
 
 * System dependencies
 
