@@ -4,6 +4,7 @@ Este repositório está sendo utilizado para versionar o código fonte, o qual �
 
 Plataforma: Udemy
 Professor: Jackson Pires
+Mentoria: DesenvolvendoMe
 
 * Ruby version 3.2.0
 
