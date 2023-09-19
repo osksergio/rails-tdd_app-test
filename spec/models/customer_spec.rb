@@ -13,8 +13,11 @@ RSpec.describe Customer, type: :model do
   end
 
   it '# create a customer (sobrescrevendo um atributo da factory)' do
-    customer = create(:customer, name: 'Sergio Oseko')
-    expect(customer.full_name).to eq('Sr. Sergio Oseko')
+    customer1 = create(:customer, name: 'Sergio Oseko I')
+    customer2 = create(:customer, name: 'Sergio Oseko II')
+    puts customer1.email
+    puts customer2.email
+    expect(customer1.full_name).to eq('Sr. Sergio Oseko I')
   end
 
   it '# usando a herança das factories' do
