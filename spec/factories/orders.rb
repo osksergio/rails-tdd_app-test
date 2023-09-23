@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :order do
-    description { "MyString" }
-    customer { nil }
+    sequence(:description) { |n| "Order number - #{n}" }
+    customer
   end
 end
