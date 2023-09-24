@@ -15,12 +15,12 @@ RSpec.describe Order, type: :model do
     expect(order.customer).to be_kind_of(Customer)
   end
 
-  it 'have 3 orders' do
+  it 'have 3 orders - create_list' do
     orders = create_list(:order, 3)
     expect(orders.count).to eq(3)
   end
 
-  it 'overwriting a factory attribute' do
+  it 'overwriting a factory attribute - create_list' do
     orders = create_list(:order, 3, description: "Overwriting")
     puts orders.inspect
     expect(orders.count).to eq(3)
