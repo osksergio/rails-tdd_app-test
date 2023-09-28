@@ -20,6 +20,11 @@ RSpec.describe Order, type: :model do
     expect(orders.count).to eq(3)
   end
 
+  it 'have 2 orders - create_pair' do
+    orders = create_pair(:order)
+    expect(orders.count).to eq(2)
+  end
+
   it 'overwriting a factory attribute - create_list' do
     orders = create_list(:order, 3, description: "Overwriting")
     puts orders.inspect
