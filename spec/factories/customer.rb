@@ -12,7 +12,7 @@ FactoryBot.define do
     # usando sequence
     sequence(:email) { |n| "meu_email_#{n}@email.com" }
 
-    #address { Faker::Address.street_address }
+    address { Faker::Address.street_address }
 
     factory :customer_vip do
       vip { true }
