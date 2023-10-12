@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://jsonplaceholder.typicode.com/posts/1
+    uri: "<API-URL>/posts/1"
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 12 Oct 2023 12:14:19 GMT
+      - Thu, 12 Oct 2023 20:41:51 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,7 +33,7 @@ http_interactions:
       X-Ratelimit-Remaining:
       - '999'
       X-Ratelimit-Reset:
-      - '1689780869'
+      - '1688444650'
       Vary:
       - Origin, Accept-Encoding
       Access-Control-Allow-Credentials:
@@ -53,15 +53,15 @@ http_interactions:
       Cf-Cache-Status:
       - HIT
       Age:
-      - '20652'
+      - '13068'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=w3mqXUyohwSeJl6pnRjAt3E2CCdQ5fW89aOu4Zv1cpeuEaugDpwHzACnJGejaDdE%2Fv8H0Dp0KFl9MynO%2BdrXVgfc1qQCBvMHVFIQO1m%2Fd4Hec3J%2BeVVVDWAkw4n7rUFVAqnf2qD1zIHpBCCcNCiG"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6aXqMxoWI2SEvb4rqjreIghyuCt3rHXnkg48nU9xskFKO8CGZdwh9SL9g4MNRxOg5S%2FZE2nTjCaY0RYUcKj27URo%2BXd9COg4kxuUzcAZ4KyXH6wKNjSts40y%2FYuu31eCqNFkkynkR%2BjRl2lqVFtu"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 814f430d7f7a5e7e-EWR
+      - 81522a7e2ec409ee-MIA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -73,5 +73,5 @@ http_interactions:
           "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
           "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
         }
-  recorded_at: Thu, 12 Oct 2023 12:14:19 GMT
+  recorded_at: Thu, 12 Oct 2023 20:41:51 GMT
 recorded_with: VCR 6.2.0
