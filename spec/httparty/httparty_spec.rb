@@ -1,7 +1,7 @@
 describe 'httparty' do
   it 'content-type', vcr: { cassette_name: 'jsonplaceholder/posts', match_requests_on: [:body] } do
     #stub_request(:get, "https://jsonplaceholder.typicode.com/posts/1").
-    #  to_return(status: 200, body: "", headers: { 'content-type': 'application/json' })
+    #  to_return(status: 200, body: "", headers: { 'content-type': 'application/json'
 
     # primeira versão do teste usando a gem vcr
     # ainda não estava configurado vcr com metadados do RSpec
