@@ -26,6 +26,7 @@ end
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.order = "random"
   # FactoryBot Lint
   #config.before(:suite) do
   #  FactoryBot.lint
