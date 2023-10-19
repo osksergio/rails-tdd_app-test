@@ -12,6 +12,8 @@ RSpec.describe Product, type: :model do
     expect(product.errors[:description]).to include("can't be blank")
   end
 
+  it { should validate_presence_of(:description) }
+
   it 'is invalid without price' do
     product = build(:product, price: nil)
     product.valid?
