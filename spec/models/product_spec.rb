@@ -23,4 +23,9 @@ RSpec.describe Product, type: :model do
     product.valid?
     expect(product.errors[:category]).to include("can't be blank")
   end
+
+  it 'return a product with a full description' do
+    product = create(:product)
+    expect(product.full_description).to eq("#{product.description} - #{product.price}")
+  end
 end
