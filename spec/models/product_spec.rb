@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
+  # ================================================================[ testes iniciais ]
   it 'is valid with description, price and category' do
     product = create(:product)
     expect(product).to be_valid
@@ -29,5 +30,16 @@ RSpec.describe Product, type: :model do
   it 'return a product with a full description' do
     product = create(:product)
     expect(product.full_description).to eq("#{product.description} - #{product.price}")
+  end
+
+  # ================================================= [ testes usando o shoulda matchers ]
+  context 'Validates' do
+    it { is_expected.to validate_presence_of(:description) }
+    it { is_expected.to validate_presence_of(:price) }
+    it { is_expected.to validate_presence_of(:category) }
+  end
+
+  context 'Associations' do
+    it { is_expected.to belong_to(:category) }
   end
 end
