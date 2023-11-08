@@ -15,7 +15,7 @@ class NewCustomerForm
     self
   end
 
-  def fill_in_with(param = {})
+  def fill_in_with(params = {})
     fill_in('Name', with: params.fetch(:name, Faker::Name.name))
     fill_in('Email', with: params.fetch(:email, Faker::Internet.email))
     fill_in('Address', with: params.fetch(:address, Faker::Address.street_address))
