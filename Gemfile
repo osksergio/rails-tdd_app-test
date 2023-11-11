@@ -64,6 +64,7 @@ group :development, :test do
   gem 'vcr'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'rails-controller-testing'
+  gem 'rspec-json_expectations'
 end
 
 group :development do

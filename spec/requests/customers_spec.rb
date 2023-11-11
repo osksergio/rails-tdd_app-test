@@ -5,17 +5,22 @@ RSpec.describe "Customers", type: :request do
     it "works! 200 OK" do
       get customers_path
       expect(response).to have_http_status(200)
-      expect(response.body).to include_json
     end
 
     it "JSON 200 OK" do
-      get "/customer.json"
+      get "/customers.json"
       expect(response).to have_http_status(200)
       expect(response.body).to include_json([
-                                 id: 1,
-                                 name: "Teste",
-                                 email: "teste@teste"
+                                              id: 1,
+                                              name: "Teste",
+                                              email: "teste@teste",
                                             ])
+    end
+
+    it "show - JSON 200 OK" do
+      get "/customers/1.json"
+      expect(response).to have_http_status(200)
+      expect(response.body).to include_json(id: 1)
     end
   end
 end
