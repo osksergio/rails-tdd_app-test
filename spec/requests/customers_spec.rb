@@ -11,10 +11,10 @@ RSpec.describe "Customers", type: :request do
       get "/customers.json"
       expect(response).to have_http_status(200)
       expect(response.body).to include_json([
-                                              id: 1,
-                                              name: "Teste da Silva",
-                                              email: "teste@silva.com",
-                                            ])
+        id: 1,
+        name: "Teste da Silva",
+        email: "teste@silva.com"
+      ])
     end
 
     it "show - JSON 200 OK" do
@@ -27,10 +27,10 @@ RSpec.describe "Customers", type: :request do
       get "/customers.json"
       expect(response).to have_http_status(200)
       expect(response.body).to include_json([
-                                 id: /\d/,
-                                 name: (be_a_kind_of String),
-                                 email: (be_a_kind_of String),
-                                            ])
+        id: /\d/,
+        name: (be_a_kind_of String),
+        email: (be_a_kind_of String)
+      ])
     end
 
     it "uses be_kind_of in the include_json (id = 1)" do
@@ -39,7 +39,23 @@ RSpec.describe "Customers", type: :request do
       expect(response.body).to include_json(
         id: /\d/,  # expressão regular indicando um número
         name: (be_a_kind_of String),
-        email: (be_a_kind_of String),
+        email: (be_a_kind_of String)
+      )
+    end
+
+    it 'create - JSON' do
+      member = create(:member)
+      login_as(member, scope: :member)
+
+      headers = { "ACCEPT" => "application/json" }
+
+      customer_params = attributes_for(:customer)
+      post "/customers.json", params: { customer: customer_params }, headers: headers
+
+      expect(response.body).to include_json(
+        id: /\d/,  # expressão regular indicando um número
+        name: customer_params[:name],
+        email: customer_params.fetch(:email)
       )
     end
   end
